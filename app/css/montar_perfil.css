@@ -31,6 +31,28 @@ body {
     border-radius: 10px;
 }
 
+.perfil-box .back-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    color: #FF6B00;
+}
+
+
+
 .perfil-box h2 {
     text-align: center;
     color: #fff;
@@ -55,7 +77,7 @@ body {
     outline: none;
 }
 
-.perfil-box button {
+.perfil-box .continuar-button {
     padding: 8px;
     background-color: #fff;
     border: none;
@@ -66,7 +88,7 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.perfil-box button:hover {
+.perfil-box .continuar-button:hover {
     background-color: #FF7F22; 
     color: #fff; 
 }
