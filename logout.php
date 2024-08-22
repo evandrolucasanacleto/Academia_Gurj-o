@@ -6,4 +6,4 @@ if(!isset($_SESSION)) {
 
 session_destroy();
 
-header("Location: cadastro_login.php");
+header("Location: index.php");
