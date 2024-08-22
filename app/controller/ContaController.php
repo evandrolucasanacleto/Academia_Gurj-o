@@ -12,7 +12,7 @@ $contadao = new ContaDAO();
 $d = filter_input_array(INPUT_POST);
 
 //se a operação for gravar entra nessa condição
-if(isset($_POST['cadastrar'])){
+if (isset($_POST['cadastrar'])) {
 
     $conta->setNome($d['nome']);
     $conta->setSobrenome($d['sobrenome']);
@@ -21,11 +21,10 @@ if(isset($_POST['cadastrar'])){
     $conta->setSenha($d['senha']);
 
     $contadao->create($conta);
-
-    header("Location: ../../");
-} 
+    echo  "<script>alert('Conta cadastrada com Sucesso!'); javascript:window.location='../../index.php';</script>";
+}
 // se a requisição for editar
-else if(isset($_POST['editar'])){
+else if (isset($_POST['editar'])) {
 
     $conta->setNome($d['nome']);
     $conta->setSobrenome($d['sobrenome']);
@@ -39,13 +38,13 @@ else if(isset($_POST['editar'])){
     header("Location: ../../");
 }
 // se a requisição for deletar
-else if(isset($_GET['del'])){
+else if (isset($_GET['del'])) {
 
     $conta->setId($_GET['del']);
 
     $contadao->delete($conta);
 
     header("Location: ../../");
-}else{
+} else {
     header("Location: ../../");
 }
