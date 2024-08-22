@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +7,8 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ff8a00;
+    font-family: "Righteous", sans-serif;
+    background-image: linear-gradient(to bottom, #C95405, #FF6B00, #fa7f26);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +25,7 @@ body {
 
 .container {
     display: flex;
-    background: linear-gradient(to bottom right, #000000, #ff8a00);
+    background-image: linear-gradient(130deg, #000000,#C95405, #FF6B00);
     border-radius: 15px;
     width: 350px;
     height: 500px;
@@ -51,7 +53,7 @@ body {
 
 .option {
     background-color: #f4f4f4;
-    color: black;
+    color: #FF6B00;
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 15px;
@@ -89,21 +91,33 @@ body {
     cursor: pointer;
 }
 
-.continuar-button  {
-    width: 100%;
-    padding: 15px;
-    background-color: #f4f4f4;
-    color: black;
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 20px;
+.back-button:hover {
+    transform: scale(1.2);
+    transition: .3s;
 }
 
-.continuar-button:hover  {
-    background-color: #e0e0e0;
+.continuar-button  {
+    background-color: transparent;
+    border: 1px solid #e7e2db;
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 15px;
+    font-size: 10px;
+    cursor: pointer;
+    width: 300px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
 }
+
+.continuar-button:hover {
+    background-color: #fff;
+    color: #FF6B00;
+    transition: .8s;
+    transform: scale(1.1);
+}
+
 
 .logo {
     width: 200px;
