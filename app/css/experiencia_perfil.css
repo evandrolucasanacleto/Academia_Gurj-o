@@ -75,6 +75,12 @@ body {
     width: 95%;
 }
 
+.option.selected {
+    background-color: #ff6b00;
+    color: white;
+    border-color: #ff6b00;
+}
+
 .icon-container {
     width: 60px;
     height: 60px;
@@ -100,7 +106,7 @@ body {
     background-color: transparent;
     border: 1px solid #e7e2db;
     color: #e7e2db;
-    padding: 10px 40px;
+    padding: 10px 60px;
     border-radius: 15px;
     font-size: 12px;
     cursor: pointer;

@@ -36,7 +36,7 @@ p {
     margin-bottom: 20px;
 }
 
-.dias-semana {
+.dias {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px; 
@@ -62,6 +62,13 @@ p {
     grid-column: span 2;
     text-align: center;
 }
+
+.dia.selected {
+    background-color: #ff6b00;
+    color: white;
+    border-color: #ff6b00;
+}
+
 
 .back-button {
     background: none;

@@ -65,6 +65,12 @@ body {
     background-color: #e0e0e0;
 }
 
+.option.selected {
+    background-color: #ff6b00;
+    color: white;
+    border-color: #ff6b00;
+}
+
 .option span {
     display: block;
     font-size: 0.9rem;
