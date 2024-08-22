@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Righteous", sans-serif;
 }
 
 .background {
-    background-color: rgb(255, 115, 0);
+    background-image: linear-gradient(to bottom, #C95405, #FF6B00, #fa7f26);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -12,7 +14,7 @@ body {
 }
 
 .container {
-    background: linear-gradient(to bottom, black, rgb(231, 104, 0));
+    background-image: linear-gradient(130deg, #000000 ,#C95405, #FF6B00);
     border-radius: 10px;
     padding: 20px;
     width: 400px;
@@ -26,13 +28,19 @@ body {
     margin-bottom: 20px;
 }
 
-.btn {
-    background-color: rgb(75, 26, 3);
-    color: orange;
+.back-button {
+    background: none;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    color: #fff;
+    font-size: 30px;
+    top: 10px;
+    left: 15px;
     cursor: pointer;
+}
+
+.back-button:hover {
+    transform: scale(1.2);
+    transition: .3s;
 }
 
 .profile-image img {
@@ -43,7 +51,10 @@ body {
 }
 
 .info-container {
-    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    background-color: #fff;
     border-radius: 5px;
     padding: 0.8px;
     margin-bottom: 20px;
