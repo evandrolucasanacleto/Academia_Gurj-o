@@ -20,7 +20,7 @@ $contadao = new ContaDAO();
         .menu,
         thead {
             background-color: #bbb !important;
-            
+
         }
 
         .row {
@@ -31,10 +31,16 @@ $contadao = new ContaDAO();
 
 <body>
     <nav class="navbar navbar-light bg-light menu">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-            Cadastro de Conta
-            </a>
+        <a class="navbar-brand" href="#">Academia Gurjão</a>
+        <div>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(atual)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cadastro_login.php">Entrar / Cadastro</a>
+                </li>
+            </ul>
         </div>
     </nav>
     <div class="container">
@@ -59,14 +65,14 @@ $contadao = new ContaDAO();
                             <td><?= $conta->getNome() ?></td>
                             <td><?= $conta->getSobrenome() ?></td>
                             <td><?= $conta->getTelefone() ?></td>
-                            <td><?= $conta->getEmail()?></td>
-                            <td><?= $conta->getSenha()?></td>
+                            <td><?= $conta->getEmail() ?></td>
+                            <td><?= $conta->getSenha() ?></td>
                             <td class="text-center">
                                 <button class="btn  btn-warning btn-sm" data-toggle="modal" data-target="#editar><?= $conta->getId() ?>">
                                     Editar
                                 </button>
                                 <a href="app/controller/ContaController.php?del=<?= $conta->getId() ?>">
-                                <button class="btn  btn-danger btn-sm" type="button">Excluir</button>
+                                    <button class="btn  btn-danger btn-sm" type="button">Excluir</button>
                                 </a>
                             </td>
                         </tr>

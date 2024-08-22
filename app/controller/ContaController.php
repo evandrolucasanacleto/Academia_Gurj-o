@@ -21,7 +21,7 @@ if (isset($_POST['cadastrar'])) {
     $conta->setSenha($d['senha']);
 
     $contadao->create($conta);
-    echo  "<script>alert('Conta cadastrada com Sucesso!'); javascript:window.location='../../index.php';</script>";
+    echo  "<script>alert('Conta cadastrada com Sucesso!'); javascript:window.location='../../admin.php';</script>";
 }
 // se a requisição for editar
 else if (isset($_POST['editar'])) {
@@ -35,7 +35,7 @@ else if (isset($_POST['editar'])) {
 
     $contadao->update($conta);
 
-    header("Location: ../../");
+    header("Location: ../../admin.php");
 }
 // se a requisição for deletar
 else if (isset($_GET['del'])) {
@@ -44,7 +44,7 @@ else if (isset($_GET['del'])) {
 
     $contadao->delete($conta);
 
-    header("Location: ../../");
+    header("Location: ../../admin.php");
 } else {
-    header("Location: ../../");
+    header("Location: ../../admin.php");
 }
