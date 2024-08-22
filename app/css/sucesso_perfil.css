@@ -21,7 +21,7 @@ p {
     color: #191919;
     font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
     font-size: 20px;
-    margin: 0;
+    margin-bottom: 30px;
 }
 
 i {
@@ -40,6 +40,7 @@ i {
     display: inline-block;
     margin: 0 auto;
 }
+
 
 .continuar-button {
     background-color: transparent;
