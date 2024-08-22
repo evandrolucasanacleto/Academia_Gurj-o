@@ -21,7 +21,7 @@ if (isset($_POST['cadastrar'])) {
     $conta->setSenha($d['senha']);
 
     $contadao->create($conta);
-    echo  "<script>alert('Conta cadastrada com Sucesso!'); javascript:window.location='../../admin.php';</script>";
+    echo  "<script>alert('Conta cadastrada com Sucesso!'); javascript:window.location='../../cadastro_login.php';</script>";
 }
 // se a requisição for editar
 else if (isset($_POST['editar'])) {

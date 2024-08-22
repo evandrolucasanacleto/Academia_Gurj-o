@@ -31,14 +31,14 @@ $contadao = new ContaDAO();
 
 <body>
     <nav class="navbar navbar-light bg-light menu">
-        <a class="navbar-brand" href="#">Academia Gurjão</a>
+        <a class="navbar-brand" href="#">Academia Gurjão - Administração</a>
         <div>
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(atual)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="cadastro_login.php">Entrar / Cadastro</a>
+                    <a class="nav-link" href="logout.php">Sair</a>
                 </li>
             </ul>
         </div>

@@ -1,12 +1,46 @@
 <?php
-include_once "./app/conexao/Conexao.php";
-include_once "./app/dao/ContaDAO.php";
-include_once "./app/model/Conta.php";
+include('app/conexao/MySQL.php');
 
-//instancia as classes
-$conta = new Conta();
-$contadao = new ContaDAO();
+if (isset($_POST['email']) || isset($_POST['senha'])) {
+
+    if (strlen($_POST['email']) == 0) {
+        echo "Preencha seu e-mail";
+    } else if (strlen($_POST['senha']) == 0) {
+        echo "Preencha sua senha";
+    } else {
+
+        $email = $mysqli->real_escape_string($_POST['email']);
+        $senha = $mysqli->real_escape_string($_POST['senha']);
+
+        $sql_code = "SELECT * FROM conta WHERE email = '$email' AND senha = '$senha'";
+        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->error);
+
+        $quantidade = $sql_query->num_rows;
+
+        if ($quantidade == 1) {
+
+            $usuario = $sql_query->fetch_assoc();
+
+            if (!isset($_SESSION)) {
+                session_start();
+            }
+
+            $_SESSION['id'] = $usuario['id'];
+            $_SESSION['nome'] = $usuario['nome'];
+
+            // verifica se o usuário logado é o admin do sistema
+            if ($usuario['email'] == "admin@admin" && $usuario['senha'] == "admin") {
+                header("Location: admin.php");
+            } else {
+                header("Location: tela_principal.php");
+            }
+        } else {
+            echo "Falha ao logar! E-mail ou senha incorretos";
+        }
+    }
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -65,22 +99,24 @@ $contadao = new ContaDAO();
         </div><!-- Fim do primeiro conteúdo -->
 
         <div class="content second-content">
-            <div class="first-column"> <!-- Cadastro -->
+            <div class="first-column">
+                <!-- Cadastro -->
                 <h2 class="title title-1">Não tem uma conta?</h2>
                 <p class="description description-1">Faça seu cadastro agora!</p>
                 <button id="signup" class="btn btn-1">Cadastrar</button>
             </div>
-            <div class="second-column"><!-- Login -->
+            <div class="second-column">
+                <!-- Login -->
                 <h2 class="title title-2">Login</h2>
                 <p class="description description-2">Insira seus dados de login:</p>
-                <form class="form">
+                <form class="form" action="" method="POST">
                     <label class="label-input">
                         <i class="far fa-envelope icon-modify" style="color: #ff6b00;"></i>
-                        <input type="email" placeholder="Email">
+                        <input type="email" placeholder="Email" name="email">
                     </label>
                     <label class="label-input">
                         <i class="fa-solid fa-lock fa-sm icon-modify" style="color: #ff6b00;"></i>
-                        <input type="password" placeholder="Senha">
+                        <input type="password" placeholder="Senha" name="senha">
                     </label>
                     <button class="btn btn-2">Entrar</button>
                 </form>
