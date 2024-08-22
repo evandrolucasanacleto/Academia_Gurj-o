@@ -18,6 +18,9 @@ Projeto final grau tecnico campina grande - Curso  Técnico de TI
 Instalação
 ------------
 
+## Pré-requisito 
+- Instalação do XAMPP com Apache e MySQL
+
 Criar o banco de dados e sua respectiva tabela:
 
 ```sql
