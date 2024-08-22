@@ -3,13 +3,13 @@ Projeto final grau tecnico campina grande - Curso  Técnico de TI
 
 # Componentes
 
-Paulo Daniel
-João Mercus
-Pedro
-Evandro Lucas
-Woshi
-Derik
-Izabella
+- Paulo Daniel
+- João Mercus (joaomercus16@gmail.com)
+- Pedro
+- Evandro Lucas (evandrolucasanacletob@gmail.com) 
+- Woshi
+- Derik
+- Izabella
 -
 -
 -
